@@ -210,7 +210,7 @@ class SluggableTest extends TestCase {
 		$post->setSlugConfig(array(
 			'method' => function($string, $separator)
 			{
-				return strrev( Str::slug($string,$separator) );
+				return strrev( String::slug($string,$separator) );
 			}
 		));
 		$post->save();

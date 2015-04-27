@@ -10,6 +10,7 @@
  */
 namespace Laradic\Database;
 
+use Laradic\Config\Traits\ConfigProviderTrait;
 use Laradic\Support\ServiceProvider;
 
 /**
@@ -19,7 +20,18 @@ use Laradic\Support\ServiceProvider;
  */
 class DatabaseServiceProvider extends ServiceProvider
 {
+    use ConfigProviderTrait;
     protected $providers = [
         'Laradic\Database\Providers\SluggableServiceProvider'
     ];
+
+    /**
+     * Register the service provider.
+     *
+     * @return void
+     */
+    public function register()
+    {
+        $this->addConfigComponent('laradic/database', 'laradic/database', __DIR__ . '/../resources/config');
+    }
 }

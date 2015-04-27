@@ -1,6 +1,7 @@
 <?php namespace Laradic\Database\Sluggable;
 
 use Illuminate\Support\Str;
+use Laradic\Support\String;
 
 trait SluggableTrait {
 
@@ -55,7 +56,7 @@ trait SluggableTrait {
 
 		if ( $method === null )
 		{
-			$slug = Str::slug($source, $separator);
+			$slug = String::slug($source, $separator);
 		}
 		elseif ( is_callable($method) )
 		{
