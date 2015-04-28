@@ -8,7 +8,7 @@
  * @copyright   2011-2015, Robin Radic
  * @link        http://radic.mit-license.org
  */
-namespace Laradic\Support;
+namespace Laradic\Database;
 
 use Exception;
 use Illuminate\Database\Eloquent\Model;

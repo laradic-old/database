@@ -24,8 +24,8 @@
     "prefer-stable": true,
     "require": {
         "php": ">=5.4.0",
-        "laradic/config": "~1.0",
-        "laradic/support": "~1.2"
+        "laradic/config": "1.0.*",
+        "laradic/support": "1.2.*"
     },
     "require-dev": {
         "laradic/dev": "dev-master"
